@@ -23,11 +23,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hellodocker-deployment
+  name: hellodocker-service
 spec:
-  type: LoadBalancer
-  ports:
-    - port: 80
-      targetPort: 80
   selector:
     app: hellodocker-deployment
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: NodePort
