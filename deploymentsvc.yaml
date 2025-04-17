@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hellodocker-deployment
-        image: cicd-test/hellodocker
+        image: chandrucloudevops/hellodocker
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
